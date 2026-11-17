@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>المعرض | حمزة العوفي</title>
+  <meta name="description" content="معرض أعمال حمزة العوفي في التصميم والموشن والمحتوى." />
+  <script>
+    (function () {
+      var d = document.documentElement; d.classList.add("js");
+      try { var t = localStorage.getItem("theme"); if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"; d.dataset.theme = t; } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Aref+Ruqaa:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+  </script>
+</head>
+<body data-page="works" data-wait-scene class="page-gallery">
+  <div id="curtain" aria-hidden="true">
+    <svg class="haa-mark" viewBox="0 0 200 200"><text class="haa-draw" x="100" y="128" text-anchor="middle">ح</text></svg>
+    <span class="curtain__label" data-curtain-label></span>
+    <span class="curtain__tc" data-curtain-tc>00:00:00:00</span>
+  </div>
+
+  <canvas id="gallery" class="scene scene--gallery" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="الرئيسية"><span class="mono">حـ</span><span data-site="name"></span></a>
+    <nav class="nav__links" aria-label="التنقل">
+      <a href="works.html" data-page="works">المعرض</a>
+      <a href="about.html" data-page="about">عنّي</a>
+      <a href="contact.html" data-page="contact">تواصل</a>
+    </nav>
+    <button class="sound-btn" type="button" aria-label="تشغيل أو إيقاف الصوت" aria-pressed="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path class="spk" d="M4 9h4l5-4v14l-5-4H4z" />
+        <path class="wave w1" d="M16 9.5a3.5 3.5 0 0 1 0 5" />
+        <path class="wave w2" d="M18.5 7a7 7 0 0 1 0 10" />
+        <path class="mute" d="M16 9l5 6M21 9l-5 6" />
+      </svg>
+    </button>
+    <button class="theme-btn" type="button" aria-label="تبديل الوضع الفاتح والداكن">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <mask id="moon-mask"><rect width="24" height="24" fill="#fff" /><circle class="moon-bite" cx="17" cy="7" r="6" fill="#000" /></mask>
+        <circle class="sun-core" cx="12" cy="12" r="5.5" mask="url(#moon-mask)" />
+        <g class="sun-rays"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" /></g>
+      </svg>
+    </button>
+  </header>
+
+  <main>
+    <div class="gallery-ui">
+      <div class="gallery-ui__top">
+        <h1 class="page-title page-title--sm"><span class="line"><span class="w">المعرض</span></span></h1>
+        <div class="chips" data-filters role="group" aria-label="تصفية الأعمال" data-intro></div>
+      </div>
+
+      <p class="gallery-empty" data-empty hidden>لا توجد أعمال في هذا القسم بعد.</p>
+
+      <div class="gallery-ui__bottom" data-intro>
+        <div class="plaque" aria-live="polite">
+          <span class="plaque__count" data-plaque-count></span>
+          <span class="plaque__title" data-plaque-title></span>
+          <span class="plaque__cat" data-plaque-cat></span>
+        </div>
+        <div class="gallery-nav">
+          <span class="gallery-hint">مرّر للتجوّل، واضغط اللوحة لفتحها</span>
+          <button class="round-btn" type="button" data-prev aria-label="العمل السابق">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+          </button>
+          <button class="round-btn" type="button" data-next aria-label="العمل التالي">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+          </button>
+        </div>
+        <div class="progress"><span data-progress></span></div>
+      </div>
+    </div>
+    <div class="gallery-spacer" data-gallery-spacer></div>
+    <ul class="sr-only" data-sr-list aria-label="قائمة الأعمال"></ul>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__inner">
+      <button class="modal__close" type="button" aria-label="إغلاق">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg>
+      </button>
+      <div class="modal__info">
+        <p class="modal__type" data-modal-type></p>
+        <h2 id="modal-title" class="modal__title" data-modal-title></h2>
+        <p class="modal__desc" data-modal-desc></p>
+        <dl class="modal__meta">
+          <div><dt>السنة</dt><dd data-modal-year></dd></div>
+          <div><dt>الأدوات</dt><dd data-modal-tools></dd></div>
+        </dl>
+      </div>
+      <div class="modal__body">
+        <div class="modal__media" data-modal-media></div>
+        <button class="modal__next" type="button" data-modal-next hidden>
+          <span class="modal__next-hint">العمل التالي</span>
+          <span class="modal__next-title" data-modal-next-title></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/intro.js"></script>
+  <script type="module" src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>حمزة العوفي</title>
+  <meta name="description" content="حمزة العوفي: تصميم جرافيك، موشن، وكتابة محتوى. مكة المكرمة." />
+  <script>
+    (function () {
+      var d = document.documentElement; d.classList.add("js");
+      try { var t = localStorage.getItem("theme"); if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"; d.dataset.theme = t; } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Aref+Ruqaa:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+  </script>
+</head>
+<body data-page="index" data-wait-scene>
+  <div id="curtain" aria-hidden="true">
+    <svg class="haa-mark" viewBox="0 0 200 200"><text class="haa-draw" x="100" y="128" text-anchor="middle">ح</text></svg>
+    <span class="curtain__label" data-curtain-label></span>
+    <span class="curtain__tc" data-curtain-tc>00:00:00:00</span>
+  </div>
+
+  <canvas id="scene" class="scene" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="الرئيسية"><span class="mono">حـ</span><span data-site="name"></span></a>
+    <nav class="nav__links" aria-label="التنقل">
+      <a href="works.html" data-page="works">المعرض</a>
+      <a href="about.html" data-page="about">عنّي</a>
+      <a href="contact.html" data-page="contact">تواصل</a>
+    </nav>
+    <button class="sound-btn" type="button" aria-label="تشغيل أو إيقاف الصوت" aria-pressed="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path class="spk" d="M4 9h4l5-4v14l-5-4H4z" />
+        <path class="wave w1" d="M16 9.5a3.5 3.5 0 0 1 0 5" />
+        <path class="wave w2" d="M18.5 7a7 7 0 0 1 0 10" />
+        <path class="mute" d="M16 9l5 6M21 9l-5 6" />
+      </svg>
+    </button>
+    <button class="theme-btn" type="button" aria-label="تبديل الوضع الفاتح والداكن">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <mask id="moon-mask"><rect width="24" height="24" fill="#fff" /><circle class="moon-bite" cx="17" cy="7" r="6" fill="#000" /></mask>
+        <circle class="sun-core" cx="12" cy="12" r="5.5" mask="url(#moon-mask)" />
+        <g class="sun-rays"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" /></g>
+      </svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero hero--poster">
+      <div class="hero__top">
+        <div class="hero__statement" data-intro>
+          <p class="hero__kicker">تصميم جرافيك، موشن، ومحتوى</p>
+          <p class="hero__big">من فكرتك،<br />إلى تصميم يتحرّك.</p>
+          <p class="hero__lede">أدرس التصميم الجرافيكي في جامعة أم القرى، وأحوّل الأفكار إلى كلمات وتصاميم وحركة.</p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="works.html">ادخل المعرض</a>
+            <a class="btn btn--ghost" href="contact.html">لنتحدث عن مشروعك</a>
+          </div>
+        </div>
+        <dl class="hero__meta" data-intro>
+          <div><dt>المدينة</dt><dd data-site="city"></dd></div>
+          <div><dt>الحالة</dt><dd>متاح للتعاون عن بُعد</dd></div>
+        </dl>
+      </div>
+      <h1 class="hero__name">
+        <span class="line"><span class="w">حمزة</span> <span class="w">العوفي</span></span>
+      </h1>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>كتابة محتوى</span><i></i><span>تصميم منشورات</span><i></i><span>موشن جرافيك</span><i></i><span>خط عربي متحرك</span><i></i><span>تجهيز للنشر</span><i></i><span>تقارير دورية</span><i></i>
+        <span>كتابة محتوى</span><i></i><span>تصميم منشورات</span><i></i><span>موشن جرافيك</span><i></i><span>خط عربي متحرك</span><i></i><span>تجهيز للنشر</span><i></i><span>تقارير دورية</span><i></i>
+      </div>
+    </div>
+
+    <section class="section doors">
+      <a class="door" href="works.html" data-reveal>
+        <span class="door__title">المعرض</span>
+        <span class="door__desc">تجوّل بين أعمالي في التصميم والموشن والمحتوى، لوحةً بعد لوحة.</span>
+        <span class="door__mark" aria-hidden="true"></span>
+      </a>
+      <a class="door" href="about.html" data-reveal>
+        <span class="door__title">عنّي</span>
+        <span class="door__desc">دراستي، تجربتي في الوكالة، والخدمات التي أقدّمها اليوم.</span>
+        <span class="door__mark" aria-hidden="true"></span>
+      </a>
+      <a class="door" href="contact.html" data-reveal>
+        <span class="door__title">تواصل</span>
+        <span class="door__desc">عندك فكرة؟ خلّنا نعطيها شكل.</span>
+        <span class="door__mark" aria-hidden="true"></span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year></span> <span data-site="name"></span></span>
+    <span class="footer__links">
+      <a data-site="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a data-site="whatsapp" href="#" target="_blank" rel="noopener">واتساب</a>
+    </span>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/intro.js"></script>
+  <script type="module">
+    import { mountHaa, signalReady } from "./js/haa.js";
+    await mountHaa(document.getElementById("scene"), {
+      layouts: { mobile: { x: 0.1, y: 1.55, s: 0.5 }, tablet: { x: -0.7, y: 0.45, s: 0.85 }, desktop: { x: -0.55, y: 0.5, s: 1.05 } },
+    });
+    signalReady();
+  </script>
+</body>
+</html>

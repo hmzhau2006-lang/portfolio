@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>عنّي | حمزة العوفي</title>
+  <meta name="description" content="حمزة العوفي، طالب تصميم جرافيكي في جامعة أم القرى ومستقل في المحتوى والتصميم." />
+  <script>
+    (function () {
+      var d = document.documentElement; d.classList.add("js");
+      try { var t = localStorage.getItem("theme"); if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"; d.dataset.theme = t; } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Aref+Ruqaa:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="about">
+  <div id="curtain" aria-hidden="true">
+    <svg class="haa-mark" viewBox="0 0 200 200"><text class="haa-draw" x="100" y="128" text-anchor="middle">ح</text></svg>
+    <span class="curtain__label" data-curtain-label></span>
+    <span class="curtain__tc" data-curtain-tc>00:00:00:00</span>
+  </div>
+
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="الرئيسية"><span class="mono">حـ</span><span data-site="name"></span></a>
+    <nav class="nav__links" aria-label="التنقل">
+      <a href="works.html" data-page="works">المعرض</a>
+      <a href="about.html" data-page="about">عنّي</a>
+      <a href="contact.html" data-page="contact">تواصل</a>
+    </nav>
+    <button class="sound-btn" type="button" aria-label="تشغيل أو إيقاف الصوت" aria-pressed="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path class="spk" d="M4 9h4l5-4v14l-5-4H4z" />
+        <path class="wave w1" d="M16 9.5a3.5 3.5 0 0 1 0 5" />
+        <path class="wave w2" d="M18.5 7a7 7 0 0 1 0 10" />
+        <path class="mute" d="M16 9l5 6M21 9l-5 6" />
+      </svg>
+    </button>
+    <button class="theme-btn" type="button" aria-label="تبديل الوضع الفاتح والداكن">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <mask id="moon-mask"><rect width="24" height="24" fill="#fff" /><circle class="moon-bite" cx="17" cy="7" r="6" fill="#000" /></mask>
+        <circle class="sun-core" cx="12" cy="12" r="5.5" mask="url(#moon-mask)" />
+        <g class="sun-rays"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" /></g>
+      </svg>
+    </button>
+  </header>
+
+  <main class="about-page">
+    <!-- الحاء الكبيرة: تنكتب مع التمرير -->
+    <div class="big-haa" aria-hidden="true"><svg viewBox="0 0 200 200"><text class="big-haa__ghost" x="100" y="132" text-anchor="middle">ح</text><text class="big-haa__ink" x="100" y="132" text-anchor="middle">ح</text></svg></div>
+
+    <section class="about-hero">
+      <h1 class="page-title">
+        <span class="line"><span class="w">أهلًا،</span></span>
+        <span class="line"><span class="w">أنا</span> <span class="w accent">حمزة.</span></span>
+      </h1>
+      <p class="about-lede" data-intro>
+        أدرس التصميم الجرافيكي في جامعة أم القرى، وأحب أن تكون الفكرة واضحة في كلماتها وصورتها وحركتها.
+      </p>
+      <div class="hero__actions" data-intro>
+        <a class="btn btn--solid" data-site="cv" href="#" target="_blank" rel="noopener">اطّلع على سيرتي الذاتية</a>
+        <a class="btn btn--ghost" href="contact.html">تواصل معي</a>
+      </div>
+    </section>
+
+    <section class="about-block">
+      <h2 class="block-title" data-reveal>رحلتي</h2>
+      <ol class="journey">
+        <li data-reveal>
+          <span class="journey__node"></span>
+          <h3>الدراسة</h3>
+          <p>طالب تصميم جرافيكي في جامعة أم القرى. أتعلم فيها الهوية والطباعة والموشن، وأجرب في كل مادة طريقة جديدة لعرض الفكرة.</p>
+        </li>
+        <li data-reveal>
+          <span class="journey__node"></span>
+          <h3>التدريب ثم الوكالة</h3>
+          <p>بدأت بالتدريب، ثم عملت ضمن وكالة دعاية وإعلان: نشر على X ومنصات Meta وTikTok، وتقارير أسبوعية وشهرية لحسابات جهة في القطاع الصحي.</p>
+        </li>
+        <li data-reveal>
+          <span class="journey__node"></span>
+          <h3>مستقل عن بُعد</h3>
+          <p>اليوم أقدّم خدماتي بشكل مستقل: من كتابة محتوى الحسابات وتصميم منشوراته إلى تجهيز النشر وإعداد التقارير.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="about-block">
+      <h2 class="block-title" data-reveal>كيف أساعدك</h2>
+      <p class="block-intro" data-reveal>خدمات شهرية مرنة تناسب احتياج فريقك. نتفق على المنصات والتسليمات قبل أن نبدأ.</p>
+      <div class="services">
+        <article class="service" data-reveal>
+          <h3>كتابة المحتوى</h3>
+          <p class="service__hook">محتوى له صوتك</p>
+          <p>أكتب نصوص حساباتك ضمن خطة شهرية، بلغة تناسب نشاطك والجمهور الذي تريد الوصول إليه.</p>
+        </article>
+        <article class="service" data-reveal>
+          <h3>تصميم المنشورات</h3>
+          <p class="service__hook">فكرتك، بصورة أوضح</p>
+          <p>أحوّل أفكار المحتوى إلى تصاميم مترابطة تراعي هويتك وطبيعة كل منصة.</p>
+        </article>
+        <article class="service" data-reveal>
+          <h3>تنسيق وتجهيز</h3>
+          <p class="service__hook">جاهز لموعد النشر</p>
+          <p>أرتّب النصوص والملفات ومواعيدها، وأجهّز المحتوى للنشر وفق نطاق العمل المتفق عليه.</p>
+        </article>
+        <article class="service" data-reveal>
+          <h3>التقارير الدورية</h3>
+          <p class="service__hook">قراءة تساعدك تقرر</p>
+          <p>أنظّم بيانات الحسابات المتاحة في تقارير دورية واضحة لمتابعة أداء المحتوى.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-block">
+      <h2 class="block-title" data-reveal>طريقة العمل</h2>
+      <ol class="steps">
+        <li data-reveal><span class="steps__n">1</span><h3>نفهم احتياجك</h3><p>نشاطك، منصاتك، والخدمات التي يحتاجها فريقك.</p></li>
+        <li data-reveal><span class="steps__n">2</span><h3>نحدّد النطاق</h3><p>التسليمات، المواعيد، وجولات التعديل المتفق عليها.</p></li>
+        <li data-reveal><span class="steps__n">3</span><h3>ننفّذ ونتابع</h3><p>تسليم منظّم ومتابعة للمحتوى وفق الخطة.</p></li>
+      </ol>
+    </section>
+
+    <section class="about-block tools-block">
+      <h2 class="block-title" data-reveal>أدواتي</h2>
+      <ul class="tools" data-reveal>
+        <li>After Effects</li><li>Illustrator</li><li>Photoshop</li><li>Media Encoder</li>
+      </ul>
+    </section>
+
+    <a class="next-page" href="contact.html" data-reveal>
+      <span class="next-page__hint">الصفحة التالية</span>
+      <span class="next-page__title">تواصل</span>
+    </a>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year></span> <span data-site="name"></span></span>
+    <span class="footer__links">
+      <a data-site="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a data-site="whatsapp" href="#" target="_blank" rel="noopener">واتساب</a>
+    </span>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/intro.js"></script>
+  <script>
+    // الحاء تنكتب مع التمرير
+    (function () {
+      // الحد يُرسم أولاً، ثم يمتلئ الحرف في آخر الصفحة
+      const ink = document.querySelector(".big-haa__ink");
+      const L = 2400;
+      function update() {
+        const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+        const prog = window.__reduce ? 1 : Math.min(1, 0.06 + (scrollY / max) * 1.05);
+        ink.style.strokeDashoffset = L * (1 - Math.min(1, prog / 0.8));
+        ink.style.fillOpacity = Math.max(0, (prog - 0.8) / 0.2);
+      }
+      addEventListener("scroll", update, { passive: true });
+      update();
+    })();
+  </script>
+</body>
+</html>

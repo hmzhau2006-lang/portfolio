@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تواصل | حمزة العوفي</title>
+  <meta name="description" content="تواصل مع حمزة العوفي للتعاون في التصميم والمحتوى." />
+  <script>
+    (function () {
+      var d = document.documentElement; d.classList.add("js");
+      try { var t = localStorage.getItem("theme"); if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"; d.dataset.theme = t; } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Aref+Ruqaa:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+  </script>
+</head>
+<body data-page="contact" data-wait-scene>
+  <div id="curtain" aria-hidden="true">
+    <svg class="haa-mark" viewBox="0 0 200 200"><text class="haa-draw" x="100" y="128" text-anchor="middle">ح</text></svg>
+    <span class="curtain__label" data-curtain-label></span>
+    <span class="curtain__tc" data-curtain-tc>00:00:00:00</span>
+  </div>
+
+  <canvas id="scene" class="scene" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="الرئيسية"><span class="mono">حـ</span><span data-site="name"></span></a>
+    <nav class="nav__links" aria-label="التنقل">
+      <a href="works.html" data-page="works">المعرض</a>
+      <a href="about.html" data-page="about">عنّي</a>
+      <a href="contact.html" data-page="contact">تواصل</a>
+    </nav>
+    <button class="sound-btn" type="button" aria-label="تشغيل أو إيقاف الصوت" aria-pressed="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path class="spk" d="M4 9h4l5-4v14l-5-4H4z" />
+        <path class="wave w1" d="M16 9.5a3.5 3.5 0 0 1 0 5" />
+        <path class="wave w2" d="M18.5 7a7 7 0 0 1 0 10" />
+        <path class="mute" d="M16 9l5 6M21 9l-5 6" />
+      </svg>
+    </button>
+    <button class="theme-btn" type="button" aria-label="تبديل الوضع الفاتح والداكن">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <mask id="moon-mask"><rect width="24" height="24" fill="#fff" /><circle class="moon-bite" cx="17" cy="7" r="6" fill="#000" /></mask>
+        <circle class="sun-core" cx="12" cy="12" r="5.5" mask="url(#moon-mask)" />
+        <g class="sun-rays"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" /></g>
+      </svg>
+    </button>
+  </header>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <p class="hero__kicker" data-intro>متاح للتعاون عن بُعد</p>
+      <h1 class="page-title">
+        <span class="line"><span class="w">عندك</span> <span class="w">فكرة؟</span></span>
+        <span class="line"><span class="w">خلّنا</span> <span class="w">نعطيها</span></span>
+        <span class="line"><span class="w accent">شكل.</span></span>
+      </h1>
+      <p class="about-lede" data-intro>أرسل لي نبذة عن نشاطك والمنصات المطلوبة، ونتحدث عن التعاون المناسب.</p>
+    </section>
+
+    <section class="channels" data-intro>
+      <div class="channel">
+        <span class="channel__label">البريد</span>
+        <a class="channel__value ltr" data-site="email-link" href="#"><span data-site="email"></span></a>
+        <button class="channel__copy" type="button" data-copy>نسخ البريد</button>
+      </div>
+      <div class="channel">
+        <span class="channel__label">واتساب</span>
+        <a class="channel__value" data-site="whatsapp" href="#" target="_blank" rel="noopener">راسلني مباشرة</a>
+      </div>
+      <div class="channel">
+        <span class="channel__label">LinkedIn</span>
+        <a class="channel__value" data-site="linkedin" href="#" target="_blank" rel="noopener">صفحتي المهنية</a>
+      </div>
+    </section>
+
+    <section class="composer" data-reveal>
+      <h2 class="block-title">اكتب رسالتك هنا</h2>
+      <p class="block-intro">تفتح الرسالة في تطبيق البريد عندك جاهزة للإرسال.</p>
+      <form class="form" data-composer>
+        <label class="field">
+          <span>اسمك</span>
+          <input name="name" type="text" autocomplete="name" required />
+        </label>
+        <fieldset class="field">
+          <legend>ماذا تحتاج؟</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="need" value="كتابة محتوى" /><span>كتابة محتوى</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="تصميم منشورات" /><span>تصميم منشورات</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="موشن جرافيك" /><span>موشن جرافيك</span></label>
+            <label class="chip"><input type="checkbox" name="need" value="تقارير" /><span>تقارير</span></label>
+          </div>
+        </fieldset>
+        <label class="field">
+          <span>عن مشروعك</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn btn--solid" type="submit">افتح الرسالة في البريد</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year></span> <span data-site="name"></span></span>
+    <span class="footer__links">
+      <a data-site="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a data-site="whatsapp" href="#" target="_blank" rel="noopener">واتساب</a>
+    </span>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/intro.js"></script>
+  <script>
+    (function () {
+      const email = window.SITE.email;
+      document.querySelector("[data-copy]").addEventListener("click", async () => {
+        try { await navigator.clipboard.writeText(email); window.SFX && SFX.play("ok"); window.toast("تم نسخ البريد"); }
+        catch (e) { window.toast(email); }
+      });
+      document.querySelector("[data-composer]").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const f = new FormData(e.target);
+        const needs = f.getAll("need");
+        const body = [f.get("message"), "", needs.length ? "أحتاج: " + needs.join("، ") : "", "", f.get("name")].join("\n");
+        location.href = "mailto:" + email + "?subject=" + encodeURIComponent("تعاون جديد من " + f.get("name")) + "&body=" + encodeURIComponent(body);
+        window.SFX && SFX.play("ok");
+        window.toast("تم فتح الرسالة في البريد");
+      });
+    })();
+  </script>
+  <script type="module">
+    import { mountHaa, signalReady } from "./js/haa.js";
+    await mountHaa(document.getElementById("scene"), {
+      follow: 0.9,
+      scrollSpin: 0.6,
+      bits: 30,
+      layouts: { mobile: { x: 0.6, y: 1.9, s: 0.4 }, tablet: { x: -1.5, y: 0.4, s: 0.7 }, desktop: { x: -2.1, y: 0.2, s: 0.95 } },
+    });
+    signalReady();
+  </script>
+</body>
+</html>
